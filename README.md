@@ -1,5 +1,4 @@
 # Sincronizacao do Metro
-
 Implementacao das funcoes de sincronizacao entre vagoes e passageiros usando pthreads, um so mutex por estacao e variaveis de condicao
 
 ## Arquivos
@@ -9,18 +8,17 @@ Implementacao das funcoes de sincronizacao entre vagoes e passageiros usando pth
 - `Makefile`: compila o projeto e gera o executavel `sync_car`
 
 ## Compilar
-    make
+make
 
 ## Executar e testar
-    ./sync_car
+./sync_car
 
-Se tudo estiver certo `Looks good!` vai estar escrito na ultima linha
+Se tudo estiver certo vai aparecer `Looks good!` na ultima linha
 Para rodar o teste 100 vezes seguidas e contar quantas dessas execucoes passaram:
-
-    for i in $(seq 1 100); do ./sync_car > /dev/null 2>&1 && echo ok; done | wc -l
+for i in $(seq 1 100); do ./sync_car > /dev/null 2>&1 && echo ok; done | wc -l
 
 ## Limpar
-    make clean
+make clean
 
 ## Sistema operacional
 Implementado e testado com o Linux (Ubuntu 24.04 por WSL no Windows), gcc e make
